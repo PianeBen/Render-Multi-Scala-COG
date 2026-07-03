@@ -765,9 +765,3 @@ Il file COG risultante, generato con questa architettura, mantiene tutte le cara
 **[11]** Milani, E. et al. (2024). A computational framework for processing time-series of earth observation data based on discrete convolution: global-scale historical Landsat cloud-free aggregates at 30 m spatial resolution. PLOS ONE / PMC. Disponibile: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11624844/
 
 **[12]** Kowalski, D. et al. (2025). Optimizing Cloud-to-GPU Throughput for Deep Learning With Earth Observation Data. arXiv. Disponibile: https://arxiv.org/abs/2506.06235
-
-### Roadmap QGIS
-
-**[13]** QGIS Project Board (2025). Update on QGIS 4.0 Release Schedule and LTR Plans. QGIS Blog, 7 ottobre 2025. Disponibile: https://blog.qgis.org/2025/10/07/update-on-qgis-4-0-release-schedule-and-ltr-plans/
-
-**[14]** Bernasocchi, M. (2025). QGIS Is Moving to Qt6 and Launching QGIS 4.0. QGIS Blog, 17 aprile 2025. Disponibile: https://blog.qgis.org/2025/04/17/qgis-is-moving-to-qt6-and-launching-qgis-4-0/
