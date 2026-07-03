@@ -1,0 +1,109 @@
+C:\temp>bench
+
+ Avvio benchmark QGIS (tempo + banda)...
+ NO-COG : C:\temp\GISDIS_FVG_ReteNOCOG.qgs
+ COG    : C:\temp\GISDIS_FVG_Rete.qgs
+ Runs   : 5
+
+ IMPORTANTE: chiudere OneDrive/Teams/browser per misure di banda pulite.
+
+
+==========================================================
+  BENCHMARK RENDERING QGIS — RUN ISOLATI + BANDA
+==========================================================
+  python-qgis-ltr.bat   : C:\PROGRA~1\QGIS34~1.15\bin\python-qgis-ltr.bat
+  Script companion      : C:\temp\benchmark_run_singolo.py
+  Runs per progetto     : 5
+  Risoluzione           : 1920x1080
+  Flush SMB             : NO
+  Pausa tra run         : 5 s
+  Campionamento banda   : 500 ms
+  Salva serie temporale : SI
+
+  NOTA: chiudere OneDrive/Teams/browser per misure di banda pulite.
+
+==========================================================
+  PROGETTO : NO-COG
+  Path     : C:\temp\GISDIS_FVG_ReteNOCOG.qgs
+  Runs     : 5  |  1920x1080 px
+  Cache    : NO flush (misure a caldo)
+  Banda    : campionamento ogni 500 ms via netstat -e
+==========================================================
+
+  --- Run 1/5 ---
+  Caricamento : 20.024 s  |  banda RX: 185.677 MB (media 9.1499 MB/s, picco 37.3507 MB/s)
+  Rendering   : 71.882 s  (29 layer)  |  banda RX: 3707.132 MB (media 51.5395 MB/s)
+  Pausa 5 s...
+
+  --- Run 2/5 ---
+  Caricamento : 17.035 s  |  banda RX: 150.591 MB (media 8.7078 MB/s, picco 35.7781 MB/s)
+  Rendering   : 60.554 s  (29 layer)  |  banda RX: 3191.342 MB (media 52.6146 MB/s)
+  Pausa 5 s...
+
+  --- Run 3/5 ---
+  Caricamento : 19.856 s  |  banda RX: 215.28 MB (media 10.6214 MB/s, picco 37.9322 MB/s)
+  Rendering   : 69.968 s  (29 layer)  |  banda RX: 3701.918 MB (media 52.9453 MB/s)
+  Pausa 5 s...
+
+  --- Run 4/5 ---
+  Caricamento : 16.242 s  |  banda RX: 107.808 MB (media 6.4538 MB/s, picco 37.9041 MB/s)
+  Rendering   : 54.238 s  (29 layer)  |  banda RX: 2761.702 MB (media 50.7198 MB/s)
+  Pausa 5 s...
+
+  --- Run 5/5 ---
+  Caricamento : 18.11 s  |  banda RX: 154.899 MB (media 8.3774 MB/s, picco 36.7335 MB/s)
+  Rendering   : 61.245 s  (29 layer)  |  banda RX: 3222.467 MB (media 52.3627 MB/s)
+
+==========================================================
+  PROGETTO : COG
+  Path     : C:\temp\GISDIS_FVG_Rete.qgs
+  Runs     : 5  |  1920x1080 px
+  Cache    : NO flush (misure a caldo)
+  Banda    : campionamento ogni 500 ms via netstat -e
+==========================================================
+
+  --- Run 1/5 ---
+  Caricamento : 14.629 s  |  banda RX: 10.059 MB (media 0.6758 MB/s, picco 6.878 MB/s)
+  Rendering   : 4.177 s  (29 layer)  |  banda RX: 198.111 MB (media 47.3471 MB/s)
+  Pausa 5 s...
+
+  --- Run 2/5 ---
+  Caricamento : 16.214 s  |  banda RX: 131.799 MB (media 7.897 MB/s, picco 36.7736 MB/s)
+  Rendering   : 0.582 s  (29 layer)  |  banda RX: 0.001 MB (media 0.0016 MB/s)
+  Pausa 5 s...
+
+  --- Run 3/5 ---
+  Caricamento : 17.131 s  |  banda RX: 149.02 MB (media 8.6178 MB/s, picco 40.709 MB/s)
+  Rendering   : 0.562 s  (29 layer)  |  banda RX: 0.037 MB (media 0.0636 MB/s)
+  Pausa 5 s...
+
+  --- Run 4/5 ---
+  Caricamento : 23.515 s  |  banda RX: 159.707 MB (media 6.7112 MB/s, picco 38.8258 MB/s)
+  Rendering   : 0.578 s  (29 layer)  |  banda RX: 0.003 MB (media 0.0044 MB/s)
+  Pausa 5 s...
+
+  --- Run 5/5 ---
+  Caricamento : 15.975 s  |  banda RX: 116.737 MB (media 7.2825 MB/s, picco 40.9851 MB/s)
+  Rendering   : 0.579 s  (29 layer)  |  banda RX: 0.0 MB (media 0.0 MB/s)
+
+==========================================================
+  RIEPILOGO STATISTICO
+==========================================================
+
+  NO-COG  (5 run OK / 5 totali):
+    Tempo caricamento : media: 18.253 s  |  min: 16.242 s  |  max: 20.024 s  |  stdev: 1.677 s
+    Tempo rendering   : media: 63.577 s  |  min: 54.238 s  |  max: 71.882 s  |  stdev: 7.273 s
+    Banda caricamento : media: 162.85 MB  |  min: 107.81 MB  |  max: 215.28 MB  |  stdev: 40.35 MB
+    Banda rendering   : media: 3316.91 MB  |  min: 2761.70 MB  |  max: 3707.13 MB  |  stdev: 397.95 MB
+
+  COG  (5 run OK / 5 totali):
+    Tempo caricamento : media: 17.493 s  |  min: 14.629 s  |  max: 23.515 s  |  stdev: 3.483 s
+    Tempo rendering   : media: 1.296 s  |  min: 0.562 s  |  max: 4.177 s  |  stdev: 1.611 s
+    Banda caricamento : media: 113.46 MB  |  min: 10.06 MB  |  max: 159.71 MB  |  stdev: 60.09 MB
+    Banda rendering   : media: 39.63 MB  |  min: 0.00 MB  |  max: 198.11 MB  |  stdev: 88.59 MB
+
+  Speedup rendering COG vs NO-COG      : 49.1×
+  Riduzione banda caricamento COG vs NO-COG : 30.3%
+
+  CSV riepilogo : C:\temp\risultati\benchmark_render_20260623_102107.csv
+  CSV serie banda : C:\temp\risultati\benchmark_banda_serie_20260623_102107.csv
