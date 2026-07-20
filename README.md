@@ -1,6 +1,6 @@
 # Generazione di un COG Multi-Scala con PyQGIS e GDAL
 
-*Analisi tecnica dettagliata dello script render_multiscale_cog.py*
+*Analisi tecnica dettagliata dello script Render_Multiscale_Cog_Proc.py*
 
 Sistema di riferimento EPSG:6708 
 
@@ -14,7 +14,7 @@ Ciò che segue è il risultato di numerosi tentativi falliti e ripetuti fino a o
 
 ### 1.2 Da dove nasce l'esigenza
 
-Lo script render_multiscale_cog.py risponde a un problema pratico tipico dei sistemi GIS su rete locale: un progetto QGIS composto da decine di layer vettoriali tematizzati e da raster di sfondo risulta lento da caricare quando i dati risiedono su un server di rete, perché ogni layer viene trasferito per intero prima di poter essere visualizzato.
+Lo script Render_Multiscale_Cog_Proc.py risponde a un problema pratico tipico dei sistemi GIS su rete locale: un progetto QGIS composto da decine di layer vettoriali tematizzati e da raster di sfondo risulta lento da caricare quando i dati risiedono su un server di rete, perché ogni layer viene trasferito per intero prima di poter essere visualizzato.
 
 La soluzione adottata è la pre-renderizzazione del progetto in un file raster unico strutturato come Cloud Optimized GeoTIFF (COG) con piramidi interne generate da render reali a scale diverse. A differenza delle piramidi standard — che sono semplici ricampionamenti (media dei pixel) del livello base — le overview di questo COG contengono immagini renderizzate direttamente da QGIS alla scala corretta, con i layer appropriati attivi e le data-defined override già valutate.
 
