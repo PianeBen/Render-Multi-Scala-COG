@@ -21,6 +21,21 @@ The Render_Multiscale_Cog_Proc.py script addresses a practical problem typical o
 The adopted solution is to pre-render the project into a single raster file structured as a Cloud Optimized GeoTIFF (COG) with internal pyramids generated from real renders at different scales. Unlike standard pyramids — which are simple resamplings (pixel averages) of the base level — the overviews of this COG contain images rendered directly by QGIS at the correct scale, with the appropriate layers active and the data-defined overrides already evaluated.
 
 The COG is used as a cartographic background in the 1:150,000–1:600,000 range. Below 1:150,000 the project loads the original high-resolution layers.
+<p align="center">
+  <img src="images/render_600k.png" alt="1:600.000" width="700"><br>
+  <em>Figure 1 – Scale 1:600.000</em>
+</p>
+
+<p align="center">
+  <img src="images/render_300k.png" alt="1:300.000" width="700"><br>
+  <em>Figure 2 – Scale 1:300.000</em>
+</p>
+
+<p align="center">
+  <img src="images/render_150k.png" alt="1:150.000" width="700"><br>
+  <em>Figure 3 – Scale 1:150.000</em>
+</p>
+
 
 The COG can be thought of as a tile server embedded in the file, with no server involved: GDAL on the client side reads only the 512×512 px blocks needed for the current view through the existing network share, without downloading the whole file. It requires no additional infrastructure beyond an ordinary SMB share.
 
