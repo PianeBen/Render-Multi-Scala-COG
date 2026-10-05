@@ -27,6 +27,16 @@ Il COG viene utilizzato come sfondo cartografico nell'intervallo 1:150.000–1:6
   <em>Figura 1 – Scala 1:600.000</em>
 </p>
 
+<p align="center">
+  <img src="images/render_300k.png" alt="1:300.000" width="700"><br>
+  <em>Figura 2 – Scala 1:300.000</em>
+</p>
+
+<p align="center">
+  <img src="images/render_150k.png" alt="1:150.000" width="700"><br>
+  <em>Figura 3 – Scala 1:150.000</em>
+</p>
+
 Il COG può essere considerato un tile server embedded nel file, senza server: GDAL lato client legge solo i blocchi 512×512 px necessari alla vista corrente attraverso la condivisione di rete esistente, senza scaricare l'intero file. Non richiede infrastruttura aggiuntiva rispetto a una normale condivisione SMB.
 
 ---
