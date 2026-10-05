@@ -1,3 +1,5 @@
+**🇮🇹 Italiano** | [🇬🇧 English](README.en.md)
+
 # Generazione di un COG Multi-Scala con PyQGIS e GDAL
 
 *Analisi tecnica dettagliata dello script Render_Multiscale_Cog_Proc.py*
