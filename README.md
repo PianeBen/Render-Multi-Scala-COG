@@ -22,6 +22,11 @@ La soluzione adottata è la pre-renderizzazione del progetto in un file raster u
 
 Il COG viene utilizzato come sfondo cartografico nell'intervallo 1:150.000–1:600.000. Al di sotto di 1:150.000 il progetto carica i layer originali ad alta risoluzione.
 
+<p align="center">
+  <img src="images/render_600k.png" alt="1:600.000" width="700"><br>
+  <em>Figura 1 – Scala 1:600.000</em>
+</p>
+
 Il COG può essere considerato un tile server embedded nel file, senza server: GDAL lato client legge solo i blocchi 512×512 px necessari alla vista corrente attraverso la condivisione di rete esistente, senza scaricare l'intero file. Non richiede infrastruttura aggiuntiva rispetto a una normale condivisione SMB.
 
 ---
